@@ -1,3 +1,7 @@
-<div>
-  <p>Hello World!</p>
-</div>
+<% if defined?(@card) %>
+  <ul>
+    <% @card.each do |card| %>
+      <li> <%= card.question %> </li>
+    <% end %>
+  </ul>
+<% end %>
