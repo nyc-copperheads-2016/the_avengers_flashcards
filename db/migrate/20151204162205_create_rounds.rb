@@ -1,6 +1,6 @@
 class CreateRounds < ActiveRecord::Migration
   def change
-    create_table :round do |t|
+    create_table :rounds do |t|
       t.belongs_to :deck
       t.integer :number_correct
 
