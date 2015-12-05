@@ -1,0 +1,10 @@
+<h2> Question: <%= @card.id %> </h2>
+<br>
+<p><%= @card.question %></p>
+
+ <form method="post" action="/cards/<%= @card.id %>">
+      <input type="hidden" name="_method" value="put">
+      <input type="hidden" name="card_id" value="<%= @card.id %>">
+      <input type="text" name="answer" value= "answer">
+      <input type="submit" value="continue">
+  </form>
