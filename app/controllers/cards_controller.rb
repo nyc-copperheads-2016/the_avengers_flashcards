@@ -1,3 +1,3 @@
-get '/card/:id'
-  card =
-  erb :
+# get '/card/:id'
+#   card =
+#   erb :
