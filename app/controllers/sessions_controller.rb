@@ -6,13 +6,13 @@
 # end
 
 # this is the route for the logout button, check the form in the layout.erb if it needs to be updated
-delete '/sessions' do
+delete '/' do
   session.clear
   redirect '/'
 end
 
 # this is the logout route
-post '/sessions' do
+post '/' do
   user = User.find_by(username: params[:username])
   if user && user.password == params[:password]
     session[:user_id] = user.id
