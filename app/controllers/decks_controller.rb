@@ -1,8 +1,4 @@
-get '/'
-  redirect ('/decks')
-end
-
-get '/decks'
+get '/decks' do
   erb :'decks/index'
 end
 
