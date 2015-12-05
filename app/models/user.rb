@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   include BCrypt
 
+  has_many :rounds
+
   def password
     @password ||= Password.new(password_hash)
   end
