@@ -1,9 +1,10 @@
-
 <div>
   <ul>
     <%@decks.each do |deck|%>
       <li>
-        <a href="/decks/<%="#{deck.id}"%>"><%= deck.name %></a>
+        <form action='/rounds' method='post'>
+          <input type="hidden" name='deck_id' value='<%=deck.id%>'>
+          <input type='submit'value='<%= deck.name %>'</a>
       </li>
     <% end %>
   </ul>

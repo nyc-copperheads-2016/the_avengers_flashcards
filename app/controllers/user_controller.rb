@@ -14,3 +14,7 @@ post '/users' do
     redirect'/errors=couldnt_create_login'
   end
 end
+
+get '/users/new' do
+  erb :'users/new'
+end
