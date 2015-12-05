@@ -31,15 +31,20 @@
           <input type="submit" value="Logout" />
         </form>
       <% else %>
-        <form method="post" action="/">
+
+        <a href='/users/new'>New User</a>
+        <a href="/sessions/new">Login</a>
+     <!--    <form method="post" action="/">
           <input type="text" placeholder="Username" />
           <input type="password" placeholder="Password" />
           <input type="submit" value="Login" />
-        </form>
+        </form> -->
       <% end %>
     </nav>
   </header>
+  <div class="decks">
   <%= yield %>
+  </div>
 </div>
 </body>
 </html>
