@@ -1,7 +1,7 @@
 <% if defined?(@card) %>
   <ul>
-    <% @card.each do |card| %>
-      <li> <%= card.question %> </li>
-    <% end %>
+    <% @called = [] %>
+    <% @card.sample %>
+
   </ul>
 <% end %>

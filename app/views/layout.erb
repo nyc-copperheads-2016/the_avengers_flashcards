@@ -22,15 +22,16 @@
 <body>
 <div id="content">
   <header class="main_header col-10 col-offset-1">
+    <img src="imgs/flashcard.png" />
     <a class="link_normalize" href="/"><h1 class="center col-6">FlashCards</h1></a>
     <nav class="center main_nav col-6">
       <% if logged_in? %>
-        <form method="post" action="/sessions">
+        <form method="post" action="/">
           <input type="hidden" name="_method" value="delete" />
           <input type="submit" value="Logout" />
         </form>
       <% else %>
-        <form method="post" action="/sessions/new">
+        <form method="post" action="/">
           <input type="text" placeholder="Username" />
           <input type="password" placeholder="Password" />
           <input type="submit" value="Login" />
