@@ -8,18 +8,14 @@ end
 
 post '/rounds' do
   @round = Round.new(deck_id: params[:deck_id], user_id: session[:user_id])
-  @cards = @round.deck.cards.shuffle
-  @next_card = @cards[0].id
-  session[:cards] = @cards
+  @card = @round.deck.cards.shuffle.sample.id
 
   if @round.save
-    redirect "/rounds/#{@round.id}/cards/#{@next_card}"
+    redirect "/rounds/#{@round.id}/cards/#{@card}"
   else
     '/?errors=Round not Saved'
   end
 end
-
-
 
 
 
