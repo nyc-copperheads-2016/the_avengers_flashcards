@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   include BCrypt
 
   has_many :rounds
+  has_many :guesses, through: :rounds
   validates :username, uniqueness: true
 
 
