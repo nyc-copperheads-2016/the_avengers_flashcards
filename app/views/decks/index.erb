@@ -1,11 +1,15 @@
-<div class="left decks">
+<div class="decks">
   <ul>
     <%@decks.each do |deck|%>
+      <div class="row col-6 col-offset-3">
       <li>
         <form action='/rounds' method='post'>
-          <input type="hidden" name='deck_id' value='<%=deck.id%>'>
-          <input type='image' src="imgs/<%= deck.id%>.png" alt='PLAY'</a>
+          <input type="hidden" name='deck_id' value='<%= deck.id %>' />
+          <input type='image' src="imgs/<%= deck.id %>.png" alt='PLAY'/>
+        </form>
       </li>
+      <li><%= deck.description %></li>
+    </div>
     <% end %>
   </ul>
 </div>

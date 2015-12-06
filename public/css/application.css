@@ -12,7 +12,7 @@ mobile-first
   width: 100%;
 }
 
-.rows:after {
+[class*="row"]:after {
   content: "";
   clear: both;
   display: block;
@@ -78,7 +78,7 @@ desktop
 
   [class*="col-"] {
   float: left;
-  padding: 15px
+  padding: 0;
   }
 /*column widths*/
   .col-1 {width: 8.33%}
