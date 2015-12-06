@@ -2,9 +2,7 @@
 <br>
 <p><%= @card.question %></p>
 
- <form method="post" action="/cards/<%= @card.id %>">
-      <input type="hidden" name="_method" value="put">
-      <input type="hidden" name="card_id" value="<%= @card.id %>">
+ <form method="post" action="/rounds/<%=@round.id%>/cards/<%= @card.id %>">
       <input type="text" name="answer" value= "answer">
       <input type="submit" value="continue">
   </form>
