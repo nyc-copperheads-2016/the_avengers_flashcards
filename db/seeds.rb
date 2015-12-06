@@ -1,4 +1,4 @@
-Deck.create([{name: 'Retro Game Trivia', description: "meh"},{name: 'Sports Trivia', description: "stuff"}])
+Deck.create([{name: 'Retro Game Trivia', description: "Test your retro game knowledge and see how well you remember the Golden Age of gaming!"},{name: 'Sports Trivia', description: "Do you consider yourself a tried and true sports fan? See how you stack up with a little sports trivia"}])
 
 
 #Retro Game Trivia

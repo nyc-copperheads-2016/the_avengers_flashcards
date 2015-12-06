@@ -12,7 +12,7 @@ mobile-first
   width: 100%;
 }
 
-.rows:after {
+[class*="row"]:after {
   content: "";
   clear: both;
   display: block;
@@ -33,6 +33,10 @@ default
 
 .center {
     text-align: center;
+}
+
+.left {
+  text-align: left;
 }
 
 .button {
@@ -57,13 +61,24 @@ main nave
 }
 
 /********************
+main nave
+********************/
+.decks ul {
+  list-style: none;
+}
+
+.decks li {
+  margin: .5rem;
+}
+
+/********************
 desktop
 ********************/
 @media only screen and (min-device-width: 730px) {
 
   [class*="col-"] {
   float: left;
-  padding: 15px
+  padding: 0;
   }
 /*column widths*/
   .col-1 {width: 8.33%}
@@ -94,10 +109,6 @@ desktop
 
 }
 
-
-.container {
-  text-align: center;
-}
 
 
 
