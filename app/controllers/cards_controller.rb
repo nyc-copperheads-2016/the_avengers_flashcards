@@ -1,7 +1,6 @@
 get '/rounds/:id/cards/:card_id' do
   @round = Round.find_by(id: params[:id])
-  card = Card.find_by(id: params[:card_id])
-  @card = card
+  @card = Card.find_by(id: params[:card_id])
   erb :'cards/question'
 end
 
@@ -17,15 +16,5 @@ post '/rounds/:id/cards/:card_id' do
   end
 end
 
-
-
-# put '/cards/:id' do
-#   @card = Card.find(params[:id])
-#   if params[:answer] == @card.answer
-#     redirect '/'
-#   else
-#     '/?errors=incorrect_username_or_password'
-#   end
-# end
 
 

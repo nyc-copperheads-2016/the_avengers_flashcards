@@ -35,6 +35,10 @@ default
     text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
 .button {
   border: none;
   margin: .5rem .25rem;
@@ -54,6 +58,17 @@ main nave
 ********************/
 .main_nav {
     margin: 1.5rem 0;
+}
+
+/********************
+main nave
+********************/
+.decks ul {
+  list-style: none;
+}
+
+.decks li {
+  margin: .5rem;
 }
 
 /********************
@@ -94,10 +109,6 @@ desktop
 
 }
 
-
-.container {
-  text-align: center;
-}
 
 
 

@@ -22,7 +22,7 @@
 <body>
 <div id="content">
   <header class="main_header col-10 col-offset-1">
-    <img src="imgs/flashcard.png" />
+    <!-- <img src="imgs/flashcard.png" /> -->
     <a class="link_normalize" href="/"><h1 class="center col-6">FlashCards</h1></a>
     <nav class="center main_nav col-6">
       <% if logged_in? %>
@@ -31,20 +31,14 @@
           <input type="submit" value="Logout" />
         </form>
       <% else %>
-
         <a href='/users/new'>New User</a>
         <a href="/sessions/new">Login</a>
-     <!--    <form method="post" action="/">
-          <input type="text" placeholder="Username" />
-          <input type="password" placeholder="Password" />
-          <input type="submit" value="Login" />
-        </form> -->
       <% end %>
     </nav>
   </header>
-  <div class="decks">
-  <%= yield %>
-  </div>
+    <div class="center col-12">
+      <%= yield %>
+    </div>
 </div>
 </body>
 </html>
