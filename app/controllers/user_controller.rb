@@ -18,3 +18,8 @@ end
 get '/users/new' do
   erb :'users/new'
 end
+
+get '/users/:id' do 
+  @user = params[:id]
+  erb :'users/show'
+end
