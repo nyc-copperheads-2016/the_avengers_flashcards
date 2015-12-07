@@ -5,7 +5,7 @@ post '/guesses' do
 @guess = Guess.new(round_id: params[:round_id], card_id: params[:card_id], guess: params[:guess])
   if @guess.save
     answer = params[:guess]
-    if answer == @card.answer
+    if answer.downcase == @card.answer.downcase
       @guess.update_attributes(correct: 1)
       session[:card_ids].shift
       if session[:card_ids].length == 0
