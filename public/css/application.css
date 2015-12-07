@@ -22,6 +22,7 @@ html, body {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   /*background: #F2F2F2;*/
+  font-size: 1.5rem;
 }
 
 /********************
@@ -53,11 +54,24 @@ default
     text-decoration: none;
     color: #000;
 }
+
+/********************
+main header
+********************/
+.title {
+  font-size: 2.5rem;
+}
+
 /********************
 main nave
 ********************/
 .main_nav {
     margin: 1.5rem 0;
+    font-size: 2.5rem;
+}
+
+.main_nav ul {
+  display: block;
 }
 
 /********************
@@ -107,6 +121,32 @@ desktop
   .col-offset-10 {margin-left: 83.33%}
   .col-offset-11 {margin-left: 91.66%}
 
+
+  html, body {
+    font-size: 1rem;
+  }
+
+/********************
+main header
+********************/
+  .title {
+    font-size: 1rem;
+  }
+
+/********************
+main nave
+********************/
+  .main_nav {
+      font-size: 1rem;
+  }
+
+  .main_nav ul {
+    list-style: none;
+  }
+
+  .main_nav li {
+    display: inline-block;
+  }
 }
 
 
