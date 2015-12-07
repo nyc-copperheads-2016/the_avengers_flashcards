@@ -6,6 +6,9 @@ class Deck < ActiveRecord::Base
   #   @cards = []
 
   # end
+  def self.shuffle(deck)
+    (1..deck.cards.count).to_a.shuffle
+  end
 
 
   # #shuffle method
@@ -18,6 +21,6 @@ class Deck < ActiveRecord::Base
   #     increment first correct and pop the card
   #   else
   #   end
-    
+
 
 end
