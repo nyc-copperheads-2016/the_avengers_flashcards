@@ -20,6 +20,7 @@ get '/users/new' do
 end
 
 get '/users/:id' do 
-  @user = params[:id]
-  erb :'users/show'
+  @user = User.find(params[:id])
+  @round = @user.rounds
+  erb :'/users/show'
 end
