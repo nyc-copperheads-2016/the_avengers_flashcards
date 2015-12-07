@@ -23,7 +23,7 @@
 <div id="content">
   <header class="main_header col-10 col-offset-1">
     <!-- <img src="imgs/flashcard.png" /> -->
-    <a class="link_normalize" href="/"><h1 class="center col-6">FlashCards</h1></a>
+    <a class="link_normalize title" href="/"><h1 class="center col-6">FlashCards</h1></a>
     <nav class="center main_nav col-6">
       <% if logged_in? %>
         <form method="post" action="/">
@@ -31,8 +31,10 @@
           <input type="submit" value="Logout" />
         </form>
       <% else %>
-        <a href='/users/new'>New User</a>
-        <a href="/sessions/new">Login</a>
+        <ul>
+          <li><a href='/users/new'>New User</a></li>
+          <li><a href="/sessions/new">Login</a></li>
+        </ul>
       <% end %>
     </nav>
   </header>
