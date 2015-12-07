@@ -6,7 +6,7 @@ end
 get '/decks/:id' do
  @deck = Deck.find(params[:id])
  sessions[:round] = Round.create(deck_id: params[:id])
- erb :"round/new"
+ erb :"rounds/new"
 
 end
 

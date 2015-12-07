@@ -19,6 +19,25 @@ post '/rounds' do
   end
 end
 
+get '/rounds/:id' do 
+  @round = Round.find_by(id: params[:id])  #Should be in model?
+  @number_of_guesses = Guess.all.where(round_id: params[:id]).count
+  @number_of_cards = @round.deck.cards.count
+  @deck_name = @round.deck.name
+  @guesses = Guess.all.where(round_id: params[:id]).take(@number_of_cards)
+  @correct_first = 0
+
+  @guesses.each do |guess|  #should be in model
+    if guess.correct == 1
+      @correct_first+= 1
+    end
+  end
+
+  @round.update_attributes(correct_first_try: @correct_first)  #should be in /post route
+  
+  erb :'rounds/show'
+  
+end
 
 
 
