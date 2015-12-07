@@ -1,1 +1,10 @@
-asdfasdfasdfa
+<h1>Player Statistics</h1>
+
+<div>
+      <h2><%=@user.username%></h2>
+  <div>
+  	<%@user.rounds.each do |round|%>
+  		<a href='/rounds/<%=round.id%>'><%=round.deck.name%></a>
+  </div>
+  	<%end%>
+</div>
