@@ -12,13 +12,15 @@ post '/guesses' do
       	redirect "/rounds/#{@round.id}"
       else
 	    @next_card_id = session[:card_ids][0]
-	    erb :'cards/correct'
+	    redirect "cards/correct"
   	  end
     else
       id = session[:card_ids].shift
       session[:card_ids] << id
       @next_card_id = session[:card_ids][0]
-      erb :'cards/incorrect'
+      redirect "cards/incorrect"
     end
+  else
+    '/?errors=Guess not Saved'
   end
 end
