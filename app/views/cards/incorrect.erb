@@ -1,4 +1,4 @@
 <p> Sorry, you are incorrect :( </p>
 <p> The correct answer is <%= @card.answer %></p>
-<% next_card = @card.id + 1 %>
-<a href="/card/<%= next_card %>">Next Card</a>
+
+<a href="/rounds/<%=@round.id %>/cards/<%=@next_card_id%>">Next Card</a>

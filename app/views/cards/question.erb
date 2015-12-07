@@ -3,8 +3,8 @@
 <p><%= @card.question %></p>
 
  <form method="post" action="/guesses">
-  <input type="hidden" name="card_id" value=<%="#{@card.id}"%>
-  <input type="hidden" name="round_id" value=""
+  <input type="hidden" name="card_id" value="<%="#{@card.id}"%> ">
+  <input type="hidden" name="round_id" value="<%="#{@round.id}"%>" >
   <input type="text" name="guess" value= "answer">
   <input type="submit" value="continue">
 </form>
